@@ -55,6 +55,8 @@ function countingSort($array, $maxNum)
     $_newTemp = array();
     for($i = 0; $i <=$maxNum; $i++)
     {
+        //这里while循环的目的是把在$array数组中重复的数字在返回的结果中也完全显示出来.
+        //不加这个判断.则如果$array中出现N个相同的数字,那么在返回的结果数组中只会出现一次
         while($_temp[$i]-- > 0)
         {
             $_newTemp[] = $i;
